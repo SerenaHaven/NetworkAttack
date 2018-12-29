@@ -13,7 +13,6 @@ public class AttackTrail : MonoBehaviour {
 
 	private float step = 0.0f;
 	private float factor = 0.0f;
-	private float maxRadius = 0.0f;
 	private Color color = Color.white;
 	private float trailLifetime = 5.0f;
 	private float timer = 0.0f;
@@ -56,6 +55,6 @@ public class AttackTrail : MonoBehaviour {
 		this.trailRenderer = this.trailRenderer ?? this.GetComponent<TrailRenderer> ();
 		this.trailRenderer.time = trailLifetime;
 		this.trailLifetime = trailLifetime;
-		this.trailRenderer.startColor = color;
+		this.trailRenderer.startColor = this.color;
 	}
 }
